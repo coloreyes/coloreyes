@@ -2,9 +2,12 @@ name: Generate GitHub Contribution Snake
 
 on:
   schedule:
-    # 每天 00:00 UTC 自动更新
     - cron: "0 0 * * *"
   workflow_dispatch:
+
+# ⭐ 关键：允许写入仓库内容
+permissions:
+  contents: write
 
 jobs:
   generate:
